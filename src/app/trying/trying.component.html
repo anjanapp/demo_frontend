@@ -1,0 +1,40 @@
+<!-- <p>trying works!</p> -->
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div>
+                    <input type="text" class="form-control" name="uname" formControlName="uname"  placeholder="userName"
+                        id="login_id" style="height: 50px; width: 150px ;" required>
+
+                </div>
+                <div *ngIf="this.loginForm.get('uname')?.touched&&this.loginForm.get('uname')?.errors"
+                    style="color: red;">invalid username</div>
+                <br>
+                <div>
+                    <input type="password" class="form-control" name="pswd" formControlName="pswd"
+                        placeholder="password" id="login_pswd" style="height: 50px; width: 150px;" required>
+
+                </div>
+                <div *ngIf="this.loginForm.get('pswd')?.touched&&this.loginForm.get('pswd')?.errors"
+                    style="color: red;">invalid password</div>
+
+
+                <br>
+                <div>
+                    <button type="submit">Log In</button>
+
+                </div>
+            </form>
+
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+
+</div>

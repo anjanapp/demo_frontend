@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/* body{
+    background-color: blueviolet;
+} */
+.container{
+    /* align-content: center; */
+    border: 2px red solid;
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    
+}
